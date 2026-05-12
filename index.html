@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <meta name="description" content="Data Analyst portfolio — Ahamed Nismi, final year CS student. SQL, Python, Power BI, business intelligence projects." />
   <title>Ahamed Nismi — Data Analyst Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -13,16 +13,16 @@
       box-sizing: border-box;
     }
 
-    /* ----- NEW DARK THEME (Tech/Data Analyst Focus) ----- */
+    /* ----- DARK THEME (Tech/Data Analyst Focus) ----- */
     :root {
-      --bg: #0a0a0f;           /* deep background */
-      --surface: #12121a;      /* cards / secondary bg */
-      --surface2: #1a1a26;     /* elevated surface */
-      --accent: #7fff6e;       /* neon green – primary action */
-      --accent2: #5be0ff;      /* electric cyan – highlights */
-      --accent3: #ff6eb4;      /* vibrant pink – status / badges */
-      --text: #e8e8f0;         /* main text */
-      --muted: #7070a0;        /* subdued text */
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --surface2: #1a1a26;
+      --accent: #7fff6e;
+      --accent2: #5be0ff;
+      --accent3: #ff6eb4;
+      --text: #e8e8f0;
+      --muted: #7070a0;
       --border: rgba(255, 255, 255, 0.07);
       --serif: 'Playfair Display', Georgia, serif;
       --mono: 'JetBrains Mono', monospace;
@@ -47,7 +47,7 @@
       z-index: 0;
     }
 
-    /* ----- NAVIGATION (dark glass) ----- */
+    /* ----- NAVIGATION (fully responsive) ----- */
     nav {
       position: fixed;
       top: 0;
@@ -57,47 +57,50 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2rem 5rem;
-      background: rgba(10, 10, 15, 0.88);
+      padding: 1rem 2rem;
+      background: rgba(10, 10, 15, 0.92);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 0.8rem;
     }
     .nav-logo {
       font-family: var(--serif);
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       color: var(--accent);
       letter-spacing: -0.3px;
     }
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 1.5rem;
       list-style: none;
+      flex-wrap: wrap;
     }
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       transition: color 0.2s ease;
+      white-space: nowrap;
     }
     .nav-links a:hover,
     .nav-links a.active-nav {
       color: var(--accent);
     }
 
-    /* ----- HERO SECTION ----- */
+    /* ----- HERO SECTION (mobile-optimized) ----- */
     .hero {
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 8rem 5rem 5rem;
+      padding: 7rem 2rem 4rem;
       position: relative;
-      gap: 4rem;
+      gap: 2.5rem;
     }
-    /* grid pattern over right side (subtle) */
     .hero::before {
       content: '';
       position: absolute;
@@ -106,7 +109,7 @@
       width: 45%;
       height: 100%;
       background-image: repeating-linear-gradient(transparent, transparent 39px, var(--border) 39px, var(--border) 40px);
-      opacity: 0.3;
+      opacity: 0.2;
       pointer-events: none;
     }
     .hero-left {
@@ -118,26 +121,26 @@
       align-items: center;
       gap: 0.6rem;
       font-family: var(--mono);
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 500;
       color: var(--accent2);
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
     .hero-eyebrow span {
       display: inline-block;
-      width: 32px;
+      width: 28px;
       height: 1.5px;
       background: var(--accent2);
     }
     .hero h1 {
       font-family: var(--serif);
-      font-size: clamp(3rem, 5.5vw, 5.2rem);
+      font-size: clamp(2.6rem, 8vw, 5rem);
       font-weight: 900;
-      line-height: 1.02;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.4rem;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
     }
     .hero h1 .surname {
       display: block;
@@ -146,21 +149,21 @@
     }
     .hero-role {
       font-family: var(--mono);
-      font-size: 0.9rem;
+      font-size: 0.75rem;
       color: var(--accent2);
       font-weight: 500;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.2rem;
+      word-break: break-word;
     }
     .hero-bio {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #bdbdd6;
-      line-height: 1.75;
+      line-height: 1.65;
       max-width: 480px;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
     .hero-bio strong {
       color: var(--accent);
-      font-weight: 600;
     }
     .hero-actions {
       display: flex;
@@ -173,25 +176,22 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.85rem 2rem;
+      padding: 0.75rem 1.6rem;
       border-radius: 8px;
       font-family: var(--sans);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
       text-decoration: none;
-      transition: all 0.22s ease;
-      cursor: pointer;
-      border: none;
+      transition: all 0.2s ease;
     }
     .btn-primary {
       background: var(--accent);
       color: #0a0a0f;
-      box-shadow: 0 4px 12px rgba(127, 255, 110, 0.15);
+      box-shadow: 0 4px 10px rgba(127, 255, 110, 0.15);
     }
     .btn-primary:hover {
       background: #5edc4e;
       transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(127, 255, 110, 0.28);
     }
     .btn-ghost {
       background: transparent;
@@ -201,37 +201,34 @@
     .btn-ghost:hover {
       border-color: var(--accent2);
       color: var(--accent2);
-      transform: translateY(-2px);
     }
 
-    /* info card (right side) */
+    /* info card (right) */
     .info-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 2rem;
+      border-radius: 20px;
+      padding: 1.5rem;
       backdrop-filter: blur(2px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
     }
     .info-card-header {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.8rem;
-      padding-bottom: 1rem;
+      gap: 0.6rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.8rem;
       border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
     }
     .dot {
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
     }
-    .dot-r { background: #ff5f57; }
-    .dot-y { background: #febc2e; }
-    .dot-g { background: #28c840; }
     .info-card-header span {
       font-family: var(--mono);
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       color: var(--muted);
       margin-left: auto;
     }
@@ -239,35 +236,28 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 0.7rem 0;
+      padding: 0.6rem 0;
       border-bottom: 1px dashed var(--border);
-      font-size: 0.85rem;
-    }
-    .info-row:last-child {
-      border-bottom: none;
+      font-size: 0.8rem;
+      gap: 0.5rem;
+      flex-wrap: wrap;
     }
     .info-key {
       font-family: var(--mono);
       color: var(--muted);
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       flex-shrink: 0;
-      padding-right: 1rem;
     }
     .info-val {
       color: var(--text);
       font-weight: 500;
       text-align: right;
-      line-height: 1.5;
-    }
-    .info-val a {
-      color: var(--accent2);
-      text-decoration: none;
-    }
-    .info-val a:hover {
-      text-decoration: underline;
+      line-height: 1.4;
+      word-break: break-word;
+      text-align: left;
     }
     .status-badge {
       display: inline-flex;
@@ -276,16 +266,15 @@
       background: rgba(255, 110, 180, 0.12);
       border: 1px solid rgba(255, 110, 180, 0.3);
       color: var(--accent3);
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 600;
-      padding: 0.3rem 0.8rem;
+      padding: 0.2rem 0.7rem;
       border-radius: 100px;
-      font-family: var(--mono);
     }
     .status-badge::before {
       content: '';
-      width: 6px;
-      height: 6px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background: var(--accent3);
       animation: blink 2s infinite;
@@ -296,26 +285,26 @@
     .section-wrap {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 6rem 5rem;
+      padding: 4rem 1.8rem;
       position: relative;
       z-index: 1;
     }
     .section-label {
       font-family: var(--mono);
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 600;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--accent2);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.4rem;
     }
     .section-title {
       font-family: var(--serif);
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
       font-weight: 700;
-      line-height: 1.1;
+      line-height: 1.2;
       letter-spacing: -0.02em;
-      margin-bottom: 2.8rem;
+      margin-bottom: 2rem;
       color: var(--text);
     }
     .ruled-divider {
@@ -332,202 +321,158 @@
     }
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.4rem;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.2rem;
     }
     .skill-card {
       background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 1.6rem;
-      transition: all 0.25s;
-      position: relative;
-    }
-    .skill-card::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: var(--accent);
-      transform: scaleY(0);
-      transform-origin: bottom;
-      transition: transform 0.25s;
-    }
-    .skill-card:hover::after {
-      transform: scaleY(1);
-    }
-    .skill-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-      border-color: rgba(127, 255, 110, 0.3);
+      padding: 1.4rem;
+      transition: all 0.2s;
     }
     .skill-icon {
-      font-size: 1.8rem;
-      margin-bottom: 0.8rem;
+      font-size: 1.6rem;
+      margin-bottom: 0.6rem;
     }
     .skill-card h3 {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 700;
-      margin-bottom: 0.4rem;
-      color: var(--text);
+      margin-bottom: 0.3rem;
     }
     .skill-card p {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.8rem;
     }
     .tag-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
+      gap: 0.35rem;
     }
     .tag {
       font-family: var(--mono);
-      font-size: 0.62rem;
+      font-size: 0.6rem;
       font-weight: 500;
       background: rgba(91, 224, 255, 0.08);
       color: var(--accent2);
       border: 1px solid rgba(91, 224, 255, 0.2);
-      padding: 0.2rem 0.6rem;
+      padding: 0.15rem 0.55rem;
       border-radius: 6px;
     }
 
-    /* PROJECT CARDS - perfect alignment & readability */
+    /* PROJECT CARDS - fully responsive */
     .projects-stack {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1.8rem;
     }
     .proj-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 24px;
+      border-radius: 20px;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 240px 1fr;
+      grid-template-columns: 200px 1fr;
       transition: all 0.3s;
     }
-    .proj-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 36px rgba(0, 0, 0, 0.45);
-      border-color: rgba(127, 255, 110, 0.3);
-    }
-    /* sidebars with subtle colored accents (dark friendly) */
     .proj-sidebar {
-      padding: 2rem 1.5rem;
+      padding: 1.5rem 1rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       border-right: 1px solid var(--border);
       background: var(--surface2);
+      gap: 1rem;
     }
-    .proj-sidebar.done    { background: linear-gradient(145deg, #12121a, #0f0f18); border-left: 2px solid var(--accent); }
-    .proj-sidebar.wip     { background: linear-gradient(145deg, #12121a, #10101c); border-left: 2px solid var(--accent2); }
-    .proj-sidebar.planned { background: linear-gradient(145deg, #12121a, #0e0e1a); border-left: 2px solid var(--accent3); }
+    .proj-sidebar.done    { border-left: 2px solid var(--accent); }
+    .proj-sidebar.wip     { border-left: 2px solid var(--accent2); }
+    .proj-sidebar.planned { border-left: 2px solid var(--accent3); }
     .proj-num {
       font-family: var(--serif);
-      font-size: 3.4rem;
+      font-size: 2.6rem;
       font-weight: 900;
-      color: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.06);
       line-height: 1;
-      user-select: none;
     }
     .proj-status {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
       font-family: var(--mono);
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 0.3rem 0.8rem;
+      padding: 0.25rem 0.7rem;
       border-radius: 100px;
       border: 1px solid;
       width: fit-content;
     }
-    .proj-status.done    { background: rgba(127, 255, 110, 0.1); color: var(--accent); border-color: rgba(127, 255, 110, 0.3); }
-    .proj-status.wip     { background: rgba(91, 224, 255, 0.1); color: var(--accent2); border-color: rgba(91, 224, 255, 0.3); }
-    .proj-status.planned { background: rgba(255, 110, 180, 0.1); color: var(--accent3); border-color: rgba(255, 110, 180, 0.3); }
-    .proj-status::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-    }
-    .proj-status.done::before    { background: var(--accent); }
-    .proj-status.wip::before     { background: var(--accent2); animation: blink 1.5s infinite; }
-    .proj-status.planned::before { background: var(--accent3); }
-    
     .proj-body {
-      padding: 2rem 2.2rem;
-      text-align: left;
+      padding: 1.5rem 1.5rem;
     }
     .proj-body h3 {
       font-family: var(--serif);
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.6rem;
-      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
     }
     .proj-body > p {
       color: var(--muted);
-      font-size: 0.88rem;
-      line-height: 1.7;
-      margin-bottom: 1.2rem;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
     }
     .proj-highlights {
       list-style: none;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1rem;
     }
     .proj-highlights li {
       display: flex;
       align-items: flex-start;
-      gap: 0.6rem;
-      font-size: 0.83rem;
+      gap: 0.5rem;
+      font-size: 0.78rem;
       color: #c5c5e0;
-      margin-bottom: 0.55rem;
-      line-height: 1.5;
+      margin-bottom: 0.5rem;
+      line-height: 1.45;
     }
     .proj-highlights li::before {
       content: '▹';
       color: var(--accent2);
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       flex-shrink: 0;
     }
     .proj-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.8rem;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
     }
     .proj-tag {
       font-family: var(--mono);
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       background: rgba(112, 112, 160, 0.12);
       color: #b0b0d8;
       border: 1px solid var(--border);
-      padding: 0.2rem 0.7rem;
+      padding: 0.2rem 0.6rem;
       border-radius: 6px;
     }
     .proj-progress {
-      margin-top: 1.2rem;
+      margin-top: 1rem;
       background: rgba(255,255,255,0.08);
       border-radius: 100px;
-      height: 5px;
+      height: 4px;
       overflow: hidden;
     }
     .proj-progress-bar {
       height: 100%;
       background: var(--accent2);
-      border-radius: 100px;
     }
 
-    /* CONTACT (dark refined) */
+    /* CONTACT */
     .contact-bg {
       background: var(--surface2);
       border-top: 1px solid var(--border);
@@ -535,135 +480,154 @@
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      gap: 2.5rem;
       align-items: start;
     }
     .contact-left p {
       color: #adadcc;
-      line-height: 1.8;
-      margin-bottom: 2rem;
-      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.8rem;
+      font-size: 0.9rem;
     }
     .contact-links {
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
+      gap: 0.7rem;
     }
     .contact-link {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      padding: 1rem 1.2rem;
+      gap: 0.8rem;
+      padding: 0.8rem 1rem;
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid var(--border);
       border-radius: 14px;
       text-decoration: none;
       color: #ddddf2;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 500;
       transition: all 0.2s;
     }
-    .contact-link:hover {
-      background: rgba(91, 224, 255, 0.05);
-      border-color: var(--accent2);
-      color: var(--accent2);
-      transform: translateX(5px);
-    }
     .link-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1rem;
-      flex-shrink: 0;
       background: rgba(255,255,255,0.03);
     }
     .contact-right {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 2rem;
+      border-radius: 20px;
+      padding: 1.5rem;
     }
     .contact-right h3 {
       font-family: var(--serif);
-      font-size: 1.4rem;
-      color: var(--text);
-      margin-bottom: 1.2rem;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
     }
     .info-line {
       display: flex;
-      gap: 0.75rem;
-      align-items: flex-start;
-      padding: 0.7rem 0;
+      gap: 0.6rem;
+      align-items: baseline;
+      flex-wrap: wrap;
+      padding: 0.6rem 0;
       border-bottom: 1px solid rgba(255,255,255,0.05);
-      font-size: 0.84rem;
-    }
-    .info-line:last-child {
-      border-bottom: none;
+      font-size: 0.8rem;
     }
     .lkey {
       color: var(--muted);
       font-family: var(--mono);
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      min-width: 70px;
+      min-width: 65px;
     }
     .lval {
       color: #cfcfec;
     }
-
     footer {
       background: var(--bg);
       border-top: 1px solid var(--border);
       text-align: center;
-      padding: 2rem;
+      padding: 1.5rem;
       font-family: var(--mono);
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       color: var(--muted);
-      letter-spacing: 0.06em;
     }
 
-    /* animations */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    /* FADE IN */
     .fade-in {
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 0.55s ease;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* responsiveness */
-    @media (max-width: 900px) {
-      nav { padding: 1rem 1.8rem; }
-      .nav-links { gap: 1.4rem; }
-      .hero { grid-template-columns: 1fr; padding: 7rem 1.8rem 3rem; gap: 2.8rem; }
+    /* ========== RESPONSIVE (mobile-first refinements) ========== */
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 6rem 1.5rem 3rem;
+        gap: 2rem;
+      }
       .hero::before { display: none; }
-      .section-wrap { padding: 4rem 1.8rem; }
-      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .hero-left { text-align: left; }
+      .hero-actions .btn { flex: 1 1 auto; justify-content: center; }
       .proj-card { grid-template-columns: 1fr; }
-      .proj-sidebar { border-right: none; border-bottom: 1px solid var(--border); flex-direction: row; align-items: center; justify-content: space-between; }
+      .proj-sidebar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.2rem;
+      }
       .proj-num { font-size: 2rem; }
-      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .proj-body { padding: 1.2rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+      .section-wrap { padding: 3rem 1.2rem; }
+      nav { padding: 0.8rem 1.2rem; }
+      .nav-links { gap: 0.9rem; }
+      .nav-links a { font-size: 0.65rem; white-space: nowrap; }
     }
-    @media (max-width: 600px) {
+
+    @media (max-width: 550px) {
+      .hero h1 { font-size: clamp(2.2rem, 10vw, 3.4rem); }
+      .hero-role { font-size: 0.7rem; word-break: break-all; }
+      .hero-bio { font-size: 0.85rem; }
+      .hero-actions { flex-direction: column; width: 100%; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .info-card { padding: 1rem; }
+      .info-row { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+      .info-val { text-align: left; }
       .skills-grid { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .proj-sidebar { flex-wrap: wrap; gap: 0.5rem; }
+      .proj-status { font-size: 0.55rem; }
+      .proj-body h3 { font-size: 1.2rem; }
+      .proj-highlights li { font-size: 0.74rem; }
+      .contact-link { font-size: 0.75rem; }
+      .link-icon { width: 28px; height: 28px; font-size: 0.9rem; }
+      .section-title { margin-bottom: 1.5rem; }
+    }
+
+    @media (max-width: 380px) {
+      .nav-links { gap: 0.6rem; }
+      .nav-links a { font-size: 0.6rem; letter-spacing: 0.05em; }
+      .hero-eyebrow { font-size: 0.55rem; }
+      .btn { padding: 0.65rem 1.2rem; font-size: 0.75rem; }
     }
   </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">#DataNerd</div>
+  <div class="nav-logo">A. Nismi</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -675,9 +639,9 @@
 <!-- HERO / ABOUT -->
 <section class="hero" id="about">
   <div class="hero-left">
-    <div class="hero-eyebrow"><span></span> Data Analyst </div>
+    <div class="hero-eyebrow"><span></span> Data Analyst · CS Final Year</div>
     <h1>Ahamed<span class="surname">Nismi.</span></h1>
-    <div class="hero-role">$analyst tools=SQL,Python,PowerBI,Excel</div>
+    <div class="hero-role">$ analyst --tools=SQL,Python,PowerBI --status=open</div>
     <p class="hero-bio">
       Final year <strong>Computer Science & Technology</strong> student at <strong>Uva Wellassa University of Sri Lanka</strong> — transforming raw data into strategic insights using <strong>SQL, Python, Power BI, and Excel</strong>. Passionate about business intelligence and data-driven decision making.
     </p>
@@ -697,8 +661,8 @@
       <div class="info-row"><div class="info-key">Status</div><div class="info-val"><span class="status-badge">Open to opportunities</span></div></div>
       <div class="info-row"><div class="info-key">Degree</div><div class="info-val">BSc Computer Science & Technology</div></div>
       <div class="info-row"><div class="info-key">University</div><div class="info-val">Uva Wellassa University, Sri Lanka</div></div>
-      <div class="info-row"><div class="info-key">Year</div><div class="info-val">Final Year (2022/Sep–2026/Sep)</div></div>
-      <div class="info-row"><div class="info-key">Location</div><div class="info-val">Kalmunai, Sri Lanka 🇱🇰</div></div>
+      <div class="info-row"><div class="info-key">Year</div><div class="info-val">Final Year (2025–2026)</div></div>
+      <div class="info-row"><div class="info-key">Location</div><div class="info-val">Colombo, Sri Lanka 🇱🇰</div></div>
       <div class="info-row"><div class="info-key">Focus</div><div class="info-val">Data Analytics · ML · BI</div></div>
       <div class="info-row"><div class="info-key">GitHub</div><div class="info-val"><a href="https://github.com/AhamedNismi-2000" target="_blank">AhamedNismi-2000</a></div></div>
     </div>
@@ -725,7 +689,7 @@
 
 <div class="ruled-divider"></div>
 
-<!-- PROJECTS (alignment perfect) -->
+<!-- PROJECTS (fully responsive layout) -->
 <div id="projects">
   <div class="section-wrap">
     <div class="section-label">// 03 — Data Projects</div>
@@ -733,7 +697,7 @@
     <div class="projects-stack">
       <div class="proj-card fade-in">
         <div class="proj-sidebar done"><div class="proj-num">01</div><div class="proj-status done">✓ Completed</div></div>
-        <div class="proj-body"><h3>Data Job Market Analysis 2023</h3><p>In-depth exploration of salaries, demanded skills, and market trends for data roles worldwide using Luke Barousse's dataset.</p><ul class="proj-highlights"><li>Power Pivot data modeling & relationships across multiple tables</li><li>Power Query transformation & DAX measures for tiered analysis</li><li>Interactive Power BI dashboard & identification of top-paying skills</li></ul><div class="proj-tags"><span class="proj-tag">Excel</span><span class="proj-tag">Power Query</span><span class="proj-tag">Power Pivot</span><span class="proj-tag">DAX</span><span class="proj-tag">Power BI</span></div></div>
+        <div class="proj-body"><h3>Data Job Market Analysis 2023</h3><p>Deep-dive into salaries, demanded skills, and market trends for data roles worldwide using Luke Barousse's dataset.</p><ul class="proj-highlights"><li>Power Pivot data modeling & relationships across multiple tables</li><li>Power Query transformation & DAX measures for tiered analysis</li><li>Interactive Power BI dashboard & top-paying skills identification</li></ul><div class="proj-tags"><span class="proj-tag">Excel</span><span class="proj-tag">Power Query</span><span class="proj-tag">Power Pivot</span><span class="proj-tag">DAX</span><span class="proj-tag">Power BI</span></div></div>
       </div>
       <div class="proj-card fade-in">
         <div class="proj-sidebar wip"><div class="proj-num">02</div><div class="proj-status wip">In Progress</div></div>
@@ -741,7 +705,7 @@
       </div>
       <div class="proj-card fade-in">
         <div class="proj-sidebar wip"><div class="proj-num">03</div><div class="proj-status wip">Research (60%)</div></div>
-        <div class="proj-body"><h3>Malicious URL Detection — ML & NLP</h3><p>Academic research combining heuristic rules and Random Forest for cybersecurity.</p><ul class="proj-highlights"><li>Heuristic engine: URL length, entropy, special chars</li><li>NLP lexical features & token analysis</li><li>Random Forest classifier with precision/recall evaluation</li></ul><div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">NLP</span><span class="proj-tag">Random Forest</span><span class="proj-tag">Scikit-learn</span><span class="proj-tag">Matplotlib</span></div><div class="proj-progress"><div class="proj-progress-bar" style="width:60%"></div></div></div>
+        <div class="proj-body"><h3>Malicious URL Detection — ML & NLP</h3><p>Academic research combining heuristic rules and Random Forest for cybersecurity.</p><ul class="proj-highlights"><li>Heuristic engine: URL length, entropy, special chars</li><li>NLP lexical features & token analysis</li><li>Random Forest classifier with precision/recall evaluation</li></ul><div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">NLP</span><span class="proj-tag">Random Forest</span><span class="proj-tag">Scikit-learn</span><span class="proj-tag">Cybersecurity</span></div><div class="proj-progress"><div class="proj-progress-bar" style="width:60%"></div></div></div>
       </div>
       <div class="proj-card fade-in">
         <div class="proj-sidebar planned"><div class="proj-num">04</div><div class="proj-status planned">Upcoming</div></div>
@@ -764,7 +728,7 @@
     </div>
   </div>
 </div>
-<footer>© 2026 Ahamed Nismi · Data Analyst </footer>
+<footer>© 2026 Ahamed Nismi · Data Analyst Portfolio · Uva Wellassa University, Sri Lanka</footer>
 
 <script>
   // intersection observer for fade-in cards
@@ -775,7 +739,7 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+  }, { threshold: 0.08, rootMargin: "0px 0px -20px 0px" });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
   // active nav highlight
@@ -783,7 +747,7 @@
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
     let current = '';
-    const scrollPos = window.scrollY + 140;
+    const scrollPos = window.scrollY + 100;
     sections.forEach(s => { if (scrollPos >= s.offsetTop) current = s.id; });
     navLinks.forEach(a => {
       const href = a.getAttribute('href').substring(1);
@@ -793,4 +757,4 @@
   });
 </script>
 </body>
-</html>
+</html>s
