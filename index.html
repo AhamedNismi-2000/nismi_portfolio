@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <meta name="description" content="Data Analyst portfolio — Ahamed Nismi, final year CS student. SQL, Python, Power BI, business intelligence projects." />
-  <title>Ahamed Nismi — Data Analyst Portfolio</title>
+  <meta name="description" content="Data Analyst portfolio — Ahamed Nismi, final year CS student. SQL, Python, Power BI, business intelligence projects. LeetCode SQL: 86 problems solved." />
+  <title>Ahamed Nismi — Data Analyst | 86 LeetCode SQL</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     * {
@@ -37,7 +37,6 @@
       overflow-x: hidden;
     }
 
-    /* subtle grain texture */
     body::before {
       content: '';
       position: fixed;
@@ -47,7 +46,7 @@
       z-index: 0;
     }
 
-    /* ----- NAVIGATION (fully responsive) ----- */
+    /* ----- NAVIGATION ----- */
     nav {
       position: fixed;
       top: 0;
@@ -91,13 +90,13 @@
       color: var(--accent);
     }
 
-    /* ----- HERO SECTION (mobile-optimized) ----- */
+    /* ----- HERO SECTION ----- */
     .hero {
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 7rem 2rem 4rem;
+      padding: 7rem 4rem 4rem;
       position: relative;
       gap: 2.5rem;
     }
@@ -160,10 +159,28 @@
       color: #bdbdd6;
       line-height: 1.65;
       max-width: 480px;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
     .hero-bio strong {
       color: var(--accent);
+    }
+    .leetcode-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(91, 224, 255, 0.08);
+      border: 1px solid rgba(91, 224, 255, 0.25);
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--accent2);
+      margin-bottom: 1.2rem;
+      width: fit-content;
+    }
+    .leetcode-badge::before {
+      content: "⚡";
+      font-size: 0.9rem;
     }
     .hero-actions {
       display: flex;
@@ -171,7 +188,6 @@
       flex-wrap: wrap;
     }
 
-    /* buttons */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -203,7 +219,6 @@
       color: var(--accent2);
     }
 
-    /* info card (right) */
     .info-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -226,6 +241,9 @@
       height: 9px;
       border-radius: 50%;
     }
+    .dot-r { background: #ff5f57; }
+    .dot-y { background: #febc2e; }
+    .dot-g { background: #28c840; }
     .info-card-header span {
       font-family: var(--mono);
       font-size: 0.65rem;
@@ -280,6 +298,17 @@
       animation: blink 2s infinite;
     }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
+
+    .leetcode-stats {
+      background: rgba(127, 255, 110, 0.08);
+      border-left: 2px solid var(--accent);
+      padding: 0.3rem 0.6rem;
+      border-radius: 8px;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      display: inline-block;
+    }
 
     /* shared sections */
     .section-wrap {
@@ -362,7 +391,7 @@
       border-radius: 6px;
     }
 
-    /* PROJECT CARDS - fully responsive */
+    /* PROJECT CARDS */
     .projects-stack {
       display: flex;
       flex-direction: column;
@@ -558,7 +587,6 @@
       color: var(--muted);
     }
 
-    /* FADE IN */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -569,7 +597,7 @@
       transform: translateY(0);
     }
 
-    /* ========== RESPONSIVE (mobile-first refinements) ========== */
+    /* ========== RESPONSIVE ========== */
     @media (max-width: 800px) {
       .hero {
         grid-template-columns: 1fr;
@@ -577,8 +605,6 @@
         gap: 2rem;
       }
       .hero::before { display: none; }
-      .hero-left { text-align: left; }
-      .hero-actions .btn { flex: 1 1 auto; justify-content: center; }
       .proj-card { grid-template-columns: 1fr; }
       .proj-sidebar {
         flex-direction: row;
@@ -588,46 +614,25 @@
         border-bottom: 1px solid var(--border);
         padding: 1rem 1.2rem;
       }
-      .proj-num { font-size: 2rem; }
-      .proj-body { padding: 1.2rem; }
       .contact-grid { grid-template-columns: 1fr; gap: 1.8rem; }
       .section-wrap { padding: 3rem 1.2rem; }
       nav { padding: 0.8rem 1.2rem; }
-      .nav-links { gap: 0.9rem; }
-      .nav-links a { font-size: 0.65rem; white-space: nowrap; }
     }
-
     @media (max-width: 550px) {
       .hero h1 { font-size: clamp(2.2rem, 10vw, 3.4rem); }
-      .hero-role { font-size: 0.7rem; word-break: break-all; }
-      .hero-bio { font-size: 0.85rem; }
       .hero-actions { flex-direction: column; width: 100%; }
       .hero-actions .btn { width: 100%; justify-content: center; }
-      .info-card { padding: 1rem; }
       .info-row { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
       .info-val { text-align: left; }
       .skills-grid { grid-template-columns: 1fr; }
-      .proj-sidebar { flex-wrap: wrap; gap: 0.5rem; }
-      .proj-status { font-size: 0.55rem; }
-      .proj-body h3 { font-size: 1.2rem; }
-      .proj-highlights li { font-size: 0.74rem; }
-      .contact-link { font-size: 0.75rem; }
-      .link-icon { width: 28px; height: 28px; font-size: 0.9rem; }
-      .section-title { margin-bottom: 1.5rem; }
-    }
-
-    @media (max-width: 380px) {
-      .nav-links { gap: 0.6rem; }
-      .nav-links a { font-size: 0.6rem; letter-spacing: 0.05em; }
-      .hero-eyebrow { font-size: 0.55rem; }
-      .btn { padding: 0.65rem 1.2rem; font-size: 0.75rem; }
+      .proj-sidebar { flex-wrap: wrap; }
     }
   </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">A. Nismi</div>
+  <div class="nav-logo">DataNerd</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -639,9 +644,11 @@
 <!-- HERO / ABOUT -->
 <section class="hero" id="about">
   <div class="hero-left">
-    <div class="hero-eyebrow"><span></span> Data Analyst · CS Final Year</div>
+    <div class="hero-eyebrow"><span></span> Data Analyst </div>
     <h1>Ahamed<span class="surname">Nismi.</span></h1>
-    <div class="hero-role">$ analyst --tools=SQL,Python,PowerBI --status=open</div>
+    <div class="hero-role">analyst tools=SQL,Python,Excel,PowerBI --status=open</div>
+    <!-- LeetCode SQL badge -->
+    <div class="leetcode-badge">⚡ 86 SQL problems solved on LeetCode</div>
     <p class="hero-bio">
       Final year <strong>Computer Science & Technology</strong> student at <strong>Uva Wellassa University of Sri Lanka</strong> — transforming raw data into strategic insights using <strong>SQL, Python, Power BI, and Excel</strong>. Passionate about business intelligence and data-driven decision making.
     </p>
@@ -659,12 +666,13 @@
         <span>profile.json</span>
       </div>
       <div class="info-row"><div class="info-key">Status</div><div class="info-val"><span class="status-badge">Open to opportunities</span></div></div>
-      <div class="info-row"><div class="info-key">Degree</div><div class="info-val">BSc Computer Science & Technology</div></div>
+      <div class="info-row"><div class="info-key">Degree</div><div class="info-val">BSc(Hons) in  Computer Science & Technology</div></div>
       <div class="info-row"><div class="info-key">University</div><div class="info-val">Uva Wellassa University, Sri Lanka</div></div>
-      <div class="info-row"><div class="info-key">Year</div><div class="info-val">Final Year (2025–2026)</div></div>
-      <div class="info-row"><div class="info-key">Location</div><div class="info-val">Colombo, Sri Lanka 🇱🇰</div></div>
-      <div class="info-row"><div class="info-key">Focus</div><div class="info-val">Data Analytics · ML · BI</div></div>
-      <div class="info-row"><div class="info-key">GitHub</div><div class="info-val"><a href="https://github.com/AhamedNismi-2000" target="_blank">AhamedNismi-2000</a></div></div>
+      <div class="info-row"><div class="info-key">Year</div><div class="info-val">Final Year (2022/Sep–2026/Sep)</div></div>
+      <div class="info-row"><div class="info-key">Location</div><div class="info-val">Kalmunai, Sri Lanka 🇱🇰</div></div>
+      <div class="info-row"><div class="info-key">Focus</div><div class="info-val">Data Analytics · ML </div></div>
+      <!-- NEW: LeetCode SQL achievement -->
+      <div class="info-row"><div class="info-key">LeetCode SQL</div><div class="info-val"><span class="leetcode-stats">⚡ 86 problems solved</span> (joins, windows, CTEs)</div></div>
     </div>
   </div>
 </section>
@@ -677,7 +685,7 @@
     <div class="section-label">// 02 — Technical Arsenal</div>
     <h2 class="section-title">Data Toolkit</h2>
     <div class="skills-grid">
-      <div class="skill-card fade-in"><div class="skill-icon">🗄️</div><h3>SQL & Databases</h3><p>Advanced queries, CTEs, window functions, and schema design.</p><div class="tag-row"><span class="tag">PostgreSQL</span><span class="tag">SQLite</span><span class="tag">Window Functions</span><span class="tag">DBeaver</span></div></div>
+      <div class="skill-card fade-in"><div class="skill-icon">🗄️</div><h3>SQL & Databases</h3><p>Advanced queries, CTEs, window functions, and schema design. <strong>86 LeetCode SQL problems</strong> solved.</p><div class="tag-row"><span class="tag">PostgreSQL</span><span class="tag">SQLite</span><span class="tag">Window Functions</span><span class="tag">DBeaver</span></div></div>
       <div class="skill-card fade-in"><div class="skill-icon">📊</div><h3>Excel & Power Platform</h3><p>Power Query, Power Pivot, DAX – advanced business modeling.</p><div class="tag-row"><span class="tag">Power Query</span><span class="tag">Power Pivot</span><span class="tag">DAX</span><span class="tag">Power BI</span></div></div>
       <div class="skill-card fade-in"><div class="skill-icon">🐍</div><h3>Python (Analytics)</h3><p>Pandas, NumPy, ML, and scalable data workflows.</p><div class="tag-row"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">NLP</span></div></div>
       <div class="skill-card fade-in"><div class="skill-icon">📈</div><h3>Data Viz & BI</h3><p>Interactive dashboards, KPI storytelling, reporting automation.</p><div class="tag-row"><span class="tag">Power BI</span><span class="tag">Matplotlib</span><span class="tag">Dashboard Design</span></div></div>
@@ -689,7 +697,7 @@
 
 <div class="ruled-divider"></div>
 
-<!-- PROJECTS (fully responsive layout) -->
+<!-- PROJECTS -->
 <div id="projects">
   <div class="section-wrap">
     <div class="section-label">// 03 — Data Projects</div>
@@ -724,14 +732,13 @@
       <div class="contact-left"><p>I'm actively seeking data analyst roles, internships, and project collaborations. If you have an opportunity or just want to chat about data, reach out.</p>
         <div class="contact-links"><a href="mailto:mnanismi2000@gmail.com" class="contact-link link-email"><div class="link-icon">✉</div>mnanismi2000@gmail.com</a><a href="https://github.com/AhamedNismi-2000" target="_blank" class="contact-link link-github"><div class="link-icon">⌥</div>github.com/AhamedNismi-2000</a><a href="https://www.linkedin.com/in/ahamednismi312" target="_blank" class="contact-link link-li"><div class="link-icon">in</div>linkedin.com/in/ahamednismi312</a></div>
       </div>
-      <div class="contact-right"><h3>Snapshot</h3><div class="info-line"><div class="lkey">Name</div><div class="lval">Ahamed Nismi</div></div><div class="info-line"><div class="lkey">Role</div><div class="lval">Data Analyst (aspiring)</div></div><div class="info-line"><div class="lkey">Degree</div><div class="lval">BSc CS & Tech — Final Year</div></div><div class="info-line"><div class="lkey">Uni</div><div class="lval">Uva Wellassa University, LK</div></div><div class="info-line"><div class="lkey">Tools</div><div class="lval">SQL · Python · Power BI · Excel</div></div><div class="info-line"><div class="lkey">Open</div><div class="lval" style="color:#7fff6e;">● Available for work</div></div></div>
+      <div class="contact-right"><h3>Snapshot</h3><div class="info-line"><div class="lkey">Name</div><div class="lval">Ahamed Nismi</div></div><div class="info-line"><div class="lkey">Role</div><div class="lval">Data Analyst (aspiring)</div></div><div class="info-line"><div class="lkey">Degree</div><div class="lval">BSc CS & Tech — Final Year</div></div><div class="info-line"><div class="lkey">LeetCode SQL</div><div class="lval">⚡ 86 problems solved</div></div><div class="info-line"><div class="lkey">Uni</div><div class="lval">Uva Wellassa University, LK</div></div><div class="info-line"><div class="lkey">Tools</div><div class="lval">SQL · Python · Power BI · Excel</div></div><div class="info-line"><div class="lkey">Open</div><div class="lval" style="color:#7fff6e;">● Available for work</div></div></div>
     </div>
   </div>
 </div>
-<footer>© 2026 Ahamed Nismi · Data Analyst Portfolio · Uva Wellassa University, Sri Lanka</footer>
+<footer>© 2026 Ahamed Nismi · Data Analyst Portfolio </footer>
 
 <script>
-  // intersection observer for fade-in cards
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -742,7 +749,6 @@
   }, { threshold: 0.08, rootMargin: "0px 0px -20px 0px" });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // active nav highlight
   const sections = document.querySelectorAll('[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
@@ -757,4 +763,4 @@
   });
 </script>
 </body>
-</html>s
+</html>
