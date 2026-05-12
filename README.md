@@ -1,6 +1,6 @@
 # Ahamed Nismi – Data Analyst Portfolio
 
-> Modern, responsive portfolio website showcasing data analytics projects, technical skills, and professional experience. Designed for job applications in data analytics and business intelligence
+> Modern, portfolio website showcasing data analytics projects, technical skills, and professional experience. Designed for job applications in data analytics and business intelligence
 
 ---
 
