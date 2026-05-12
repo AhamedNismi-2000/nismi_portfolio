@@ -1,71 +1,56 @@
-# Data Analyst Portfolio
+# Ahamed Nismi – Data Analyst Portfolio
 
-## About Me
-Hi, I’m Ahamed Nismi, a final-year Computer Science and Technology undergraduate at Uva Wellassa University, Sri Lanka.  
-I am passionate about Data Analytics, Data Visualization, and Business Intelligence, and I am seeking a Data Analyst role.
+> Modern, responsive portfolio website showcasing data analytics projects, technical skills, and professional experience. Designed for job applications in data analytics and business intelligence
 
 ---
 
-## Objective
-To use data analysis skills to solve real-world business problems using SQL, Python, Excel, and Power BI.
+## 📌 About
+
+This is my personal portfolio website as a **final-year Computer Science & Technology student** at Uva Wellassa University, Sri Lanka.  
+It presents my journey into **Data Analytics**, highlighting:
+
+- Technical toolkit (SQL, Python, Power BI, Excel)
+- Completed & in-progress analytics projects
+- Research work (Malicious URL detection with ML/NLP)
+- Contact & professional social links
+
+The design uses a **dark, tech-forward theme** with neon accents, optimized for readability and a modern data-science feel.
 
 ---
 
-## Skills
-- SQL
-- Power BI
-- Python (Pandas, NumPy)
-- Excel
-- Data Cleaning
-- Data Visualization
+## 📂 Project Sections
 
----
+### 1. Hero & Profile Card
+- Dynamic intro with status badge ("Open to opportunities")
+- Info card mimicking a JSON profile (degree, location, GitHub)
 
-## Projects
+### 2. Technical Skills Grid
+6 cards covering:
+- SQL & Databases
+- Excel / Power Platform
+- Python (Analytics)
+- Data Visualization (Power BI, Matplotlib)
+- Machine Learning
+- Dev Tools (Git, VS Code)
 
-### Contoso Sales Analysis
-- Analyzed sales data using SQL and Excel  
-- Created Power BI dashboards  
-- Found sales trends and insights  
+### 3. Projects Showcase
+Each project card includes:
+- Status (Completed / In Progress / Upcoming)
+- Bullet-point highlights
+- Tech tag list
+- Optional progress bar
 
-Tools: SQL, Excel, Power BI  
+**Projects listed:**
+- Data Job Market Analysis 2023 (Excel, Power BI)
+- Contoso Sales & Operations Analytics (PostgreSQL, Power BI)
+- Malicious URL Detection – ML & NLP (Python, Scikit-learn)
+- Olist Brazilian E‑Commerce Analysis (planned – SQL, RFM)
 
----
+### 4. Contact & Quick Profile
+- Email, GitHub, LinkedIn links
+- Summary snapshot with availability status
 
-### E-Commerce Data Analysis
-- Cleaned and analyzed dataset using Python  
-- Studied customer behavior and sales patterns  
-- Created visual insights  
 
-Tools: Python, Pandas, SQL  
-
----
-
-## Tools & Technologies
-- SQL
-- Power BI
-- Excel
-- Python
-- GitHub
-
----
-
-## Resume
-Add your resume file in the repository and link it here.
-
----
-
-## Portfolio Website
-https://yourusername.github.io/your-portfolio/
-
----
-
-## Contact
-Email: your-email@example.com  
-LinkedIn: https://linkedin.com/in/yourprofile  
-GitHub: https://github.com/yourusername  
-
----
-
-## Goal
-To become a Data Analyst and grow in the field of data analytics and business intelligence.
+   ```bash
+   git clone https://github.com/AhamedNismi-2000/portfolio.git
+   cd portfolio
