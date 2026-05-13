@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <meta name="description" content="Data Analyst portfolio — Ahamed Nismi, final year CS student. SQL, Python, Power BI, business intelligence projects. LeetCode SQL: 86 problems solved." />
-  <title>Ahamed Nismi — Data Analyst | 86 LeetCode SQL</title>
+  <meta name="robots" content="index, follow"/>
+  <meta name="description" content="Ahamed Nismi — Data Analyst portfolio. SQL, Python, Power BI, Excel, Google Sheets. EDA, KPI dashboards, business intelligence. 86 LeetCode SQL problems solved."/>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ahamed Nismi — Data Analyst Portfolio"/>
+  <meta property="og:description" content="Final year CS student. SQL, Python, Power BI, Excel, Google Sheets. 86 LeetCode SQL problems solved. Open to data analyst roles."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://ahamednismi-2000.github.io/nismi_portfolio/"/>
+  <title>Ahamed Nismi — Data Analyst | SQL · Python · Power BI</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    /* ----- DARK THEME (Tech/Data Analyst Focus) ----- */
     :root {
       --bg: #0a0a0f;
       --surface: #12121a;
@@ -23,7 +24,7 @@
       --accent3: #ff6eb4;
       --text: #e8e8f0;
       --muted: #7070a0;
-      --border: rgba(255, 255, 255, 0.07);
+      --border: rgba(255,255,255,0.07);
       --serif: 'Playfair Display', Georgia, serif;
       --mono: 'JetBrains Mono', monospace;
       --sans: 'Outfit', sans-serif;
@@ -46,18 +47,16 @@
       z-index: 0;
     }
 
-    /* ----- NAVIGATION ----- */
+    /* NAV */
     nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      background: rgba(10, 10, 15, 0.92);
+      background: rgba(10,10,15,0.92);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
       flex-wrap: wrap;
@@ -69,12 +68,7 @@
       color: var(--accent);
       letter-spacing: -0.3px;
     }
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      flex-wrap: wrap;
-    }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
@@ -86,11 +80,9 @@
       white-space: nowrap;
     }
     .nav-links a:hover,
-    .nav-links a.active-nav {
-      color: var(--accent);
-    }
+    .nav-links a.active-nav { color: var(--accent); }
 
-    /* ----- HERO SECTION ----- */
+    /* HERO */
     .hero {
       min-height: 100vh;
       display: grid;
@@ -103,18 +95,13 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 45%;
-      height: 100%;
+      top: 0; right: 0;
+      width: 45%; height: 100%;
       background-image: repeating-linear-gradient(transparent, transparent 39px, var(--border) 39px, var(--border) 40px);
       opacity: 0.2;
       pointer-events: none;
     }
-    .hero-left {
-      position: relative;
-      z-index: 1;
-    }
+    .hero-left { position: relative; z-index: 1; }
     .hero-eyebrow {
       display: inline-flex;
       align-items: center;
@@ -127,12 +114,7 @@
       text-transform: uppercase;
       margin-bottom: 1rem;
     }
-    .hero-eyebrow span {
-      display: inline-block;
-      width: 28px;
-      height: 1.5px;
-      background: var(--accent2);
-    }
+    .hero-eyebrow span { display: inline-block; width: 28px; height: 1.5px; background: var(--accent2); }
     .hero h1 {
       font-family: var(--serif);
       font-size: clamp(2.6rem, 8vw, 5rem);
@@ -141,11 +123,7 @@
       letter-spacing: -0.02em;
       margin-bottom: 0.25rem;
     }
-    .hero h1 .surname {
-      display: block;
-      color: var(--accent);
-      font-style: italic;
-    }
+    .hero h1 .surname { display: block; color: var(--accent); font-style: italic; }
     .hero-role {
       font-family: var(--mono);
       font-size: 0.75rem;
@@ -161,15 +139,13 @@
       max-width: 480px;
       margin-bottom: 1.5rem;
     }
-    .hero-bio strong {
-      color: var(--accent);
-    }
+    .hero-bio strong { color: var(--accent); }
     .leetcode-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(91, 224, 255, 0.08);
-      border: 1px solid rgba(91, 224, 255, 0.25);
+      background: rgba(91,224,255,0.08);
+      border: 1px solid rgba(91,224,255,0.25);
       padding: 0.4rem 1rem;
       border-radius: 40px;
       font-family: var(--mono);
@@ -178,15 +154,7 @@
       margin-bottom: 1.2rem;
       width: fit-content;
     }
-    .leetcode-badge::before {
-      content: "⚡";
-      font-size: 0.9rem;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     .btn {
       display: inline-flex;
@@ -200,32 +168,19 @@
       text-decoration: none;
       transition: all 0.2s ease;
     }
-    .btn-primary {
-      background: var(--accent);
-      color: #0a0a0f;
-      box-shadow: 0 4px 10px rgba(127, 255, 110, 0.15);
-    }
-    .btn-primary:hover {
-      background: #5edc4e;
-      transform: translateY(-2px);
-    }
-    .btn-ghost {
-      background: transparent;
-      color: var(--text);
-      border: 1.5px solid var(--border);
-    }
-    .btn-ghost:hover {
-      border-color: var(--accent2);
-      color: var(--accent2);
-    }
+    .btn-primary { background: var(--accent); color: #0a0a0f; box-shadow: 0 4px 10px rgba(127,255,110,0.15); }
+    .btn-primary:hover { background: #5edc4e; transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+    .btn-ghost:hover { border-color: var(--accent2); color: var(--accent2); }
 
+    /* INFO CARD */
     .info-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 1.5rem;
       backdrop-filter: blur(2px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.3);
     }
     .info-card-header {
       display: flex;
@@ -236,20 +191,11 @@
       border-bottom: 1px solid var(--border);
       flex-wrap: wrap;
     }
-    .dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-    }
+    .dot { width: 9px; height: 9px; border-radius: 50%; }
     .dot-r { background: #ff5f57; }
     .dot-y { background: #febc2e; }
     .dot-g { background: #28c840; }
-    .info-card-header span {
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-      margin-left: auto;
-    }
+    .info-card-header span { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); margin-left: auto; }
     .info-row {
       display: flex;
       justify-content: space-between;
@@ -269,20 +215,13 @@
       letter-spacing: 0.06em;
       flex-shrink: 0;
     }
-    .info-val {
-      color: var(--text);
-      font-weight: 500;
-      text-align: right;
-      line-height: 1.4;
-      word-break: break-word;
-      text-align: left;
-    }
+    .info-val { color: var(--text); font-weight: 500; line-height: 1.4; word-break: break-word; }
     .status-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      background: rgba(255, 110, 180, 0.12);
-      border: 1px solid rgba(255, 110, 180, 0.3);
+      background: rgba(255,110,180,0.12);
+      border: 1px solid rgba(255,110,180,0.3);
       color: var(--accent3);
       font-size: 0.65rem;
       font-weight: 600;
@@ -291,16 +230,14 @@
     }
     .status-badge::before {
       content: '';
-      width: 5px;
-      height: 5px;
+      width: 5px; height: 5px;
       border-radius: 50%;
       background: var(--accent3);
       animation: blink 2s infinite;
     }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
-
     .leetcode-stats {
-      background: rgba(127, 255, 110, 0.08);
+      background: rgba(127,255,110,0.08);
       border-left: 2px solid var(--accent);
       padding: 0.3rem 0.6rem;
       border-radius: 8px;
@@ -310,7 +247,7 @@
       display: inline-block;
     }
 
-    /* shared sections */
+    /* SHARED SECTIONS */
     .section-wrap {
       max-width: 1100px;
       margin: 0 auto;
@@ -343,16 +280,8 @@
     }
 
     /* SKILLS */
-    .skills-bg {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-      gap: 1.2rem;
-    }
+    .skills-bg { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1.2rem; }
     .skill-card {
       background: var(--surface2);
       border: 1px solid var(--border);
@@ -360,43 +289,24 @@
       padding: 1.4rem;
       transition: all 0.2s;
     }
-    .skill-icon {
-      font-size: 1.6rem;
-      margin-bottom: 0.6rem;
-    }
-    .skill-card h3 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-    .skill-card p {
-      font-size: 0.75rem;
-      color: var(--muted);
-      line-height: 1.5;
-      margin-bottom: 0.8rem;
-    }
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-    }
+    .skill-card:hover { border-color: rgba(91,224,255,0.25); transform: translateY(-2px); }
+    .skill-icon { font-size: 1.6rem; margin-bottom: 0.6rem; }
+    .skill-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .skill-card p { font-size: 0.75rem; color: var(--muted); line-height: 1.5; margin-bottom: 0.8rem; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 0.35rem; }
     .tag {
       font-family: var(--mono);
       font-size: 0.6rem;
       font-weight: 500;
-      background: rgba(91, 224, 255, 0.08);
+      background: rgba(91,224,255,0.08);
       color: var(--accent2);
-      border: 1px solid rgba(91, 224, 255, 0.2);
+      border: 1px solid rgba(91,224,255,0.2);
       padding: 0.15rem 0.55rem;
       border-radius: 6px;
     }
 
-    /* PROJECT CARDS */
-    .projects-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-    }
+    /* PROJECTS */
+    .projects-stack { display: flex; flex-direction: column; gap: 1.8rem; }
     .proj-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -406,6 +316,7 @@
       grid-template-columns: 200px 1fr;
       transition: all 0.3s;
     }
+    .proj-card:hover { border-color: rgba(255,255,255,0.12); }
     .proj-sidebar {
       padding: 1.5rem 1rem;
       display: flex;
@@ -418,13 +329,7 @@
     .proj-sidebar.done    { border-left: 2px solid var(--accent); }
     .proj-sidebar.wip     { border-left: 2px solid var(--accent2); }
     .proj-sidebar.planned { border-left: 2px solid var(--accent3); }
-    .proj-num {
-      font-family: var(--serif);
-      font-size: 2.6rem;
-      font-weight: 900;
-      color: rgba(255,255,255,0.06);
-      line-height: 1;
-    }
+    .proj-num { font-family: var(--serif); font-size: 2.6rem; font-weight: 900; color: rgba(255,255,255,0.06); line-height: 1; }
     .proj-status {
       display: inline-flex;
       align-items: center;
@@ -439,26 +344,13 @@
       border: 1px solid;
       width: fit-content;
     }
-    .proj-body {
-      padding: 1.5rem 1.5rem;
-    }
-    .proj-body h3 {
-      font-family: var(--serif);
-      font-size: 1.25rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.5rem;
-    }
-    .proj-body > p {
-      color: var(--muted);
-      font-size: 0.82rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-    .proj-highlights {
-      list-style: none;
-      margin-bottom: 1rem;
-    }
+    .proj-sidebar.done .proj-status    { color: var(--accent);  border-color: rgba(127,255,110,0.4); background: rgba(127,255,110,0.07); }
+    .proj-sidebar.wip .proj-status     { color: var(--accent2); border-color: rgba(91,224,255,0.4);  background: rgba(91,224,255,0.07); }
+    .proj-sidebar.planned .proj-status { color: var(--accent3); border-color: rgba(255,110,180,0.4); background: rgba(255,110,180,0.07); }
+    .proj-body { padding: 1.5rem; }
+    .proj-body h3 { font-family: var(--serif); font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.5rem; }
+    .proj-body > p { color: var(--muted); font-size: 0.82rem; line-height: 1.6; margin-bottom: 1rem; }
+    .proj-highlights { list-style: none; margin-bottom: 1rem; }
     .proj-highlights li {
       display: flex;
       align-items: flex-start;
@@ -468,67 +360,46 @@
       margin-bottom: 0.5rem;
       line-height: 1.45;
     }
-    .proj-highlights li::before {
-      content: '▹';
-      color: var(--accent2);
-      font-size: 0.7rem;
-      flex-shrink: 0;
-    }
-    .proj-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.6rem;
-    }
+    .proj-highlights li::before { content: '▹'; color: var(--accent2); font-size: 0.7rem; flex-shrink: 0; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
     .proj-tag {
       font-family: var(--mono);
       font-size: 0.6rem;
-      background: rgba(112, 112, 160, 0.12);
+      background: rgba(112,112,160,0.12);
       color: #b0b0d8;
       border: 1px solid var(--border);
       padding: 0.2rem 0.6rem;
       border-radius: 6px;
     }
-    .proj-progress {
-      margin-top: 1rem;
-      background: rgba(255,255,255,0.08);
-      border-radius: 100px;
-      height: 4px;
-      overflow: hidden;
+    .proj-progress { margin-top: 1rem; background: rgba(255,255,255,0.08); border-radius: 100px; height: 4px; overflow: hidden; }
+    .proj-progress-bar { height: 100%; background: var(--accent2); border-radius: 100px; }
+    .proj-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.8rem;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--accent2);
+      text-decoration: none;
+      border: 1px solid rgba(91,224,255,0.2);
+      padding: 0.25rem 0.7rem;
+      border-radius: 6px;
+      transition: all 0.2s;
     }
-    .proj-progress-bar {
-      height: 100%;
-      background: var(--accent2);
-    }
+    .proj-link:hover { background: rgba(91,224,255,0.08); }
 
     /* CONTACT */
-    .contact-bg {
-      background: var(--surface2);
-      border-top: 1px solid var(--border);
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      align-items: start;
-    }
-    .contact-left p {
-      color: #adadcc;
-      line-height: 1.7;
-      margin-bottom: 1.8rem;
-      font-size: 0.9rem;
-    }
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-    }
+    .contact-bg { background: var(--surface2); border-top: 1px solid var(--border); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+    .contact-left p { color: #adadcc; line-height: 1.7; margin-bottom: 1.8rem; font-size: 0.9rem; }
+    .contact-links { display: flex; flex-direction: column; gap: 0.7rem; }
     .contact-link {
       display: flex;
       align-items: center;
       gap: 0.8rem;
       padding: 0.8rem 1rem;
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(255,255,255,0.02);
       border: 1px solid var(--border);
       border-radius: 14px;
       text-decoration: none;
@@ -537,83 +408,25 @@
       font-weight: 500;
       transition: all 0.2s;
     }
-    .link-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      background: rgba(255,255,255,0.03);
-    }
-    .contact-right {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 1.5rem;
-    }
-    .contact-right h3 {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-    }
-    .info-line {
-      display: flex;
-      gap: 0.6rem;
-      align-items: baseline;
-      flex-wrap: wrap;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      font-size: 0.8rem;
-    }
-    .lkey {
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      min-width: 65px;
-    }
-    .lval {
-      color: #cfcfec;
-    }
-    footer {
-      background: var(--bg);
-      border-top: 1px solid var(--border);
-      text-align: center;
-      padding: 1.5rem;
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-    }
+    .contact-link:hover { border-color: var(--accent2); color: var(--accent2); }
+    .link-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; background: rgba(255,255,255,0.03); }
+    .contact-right { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; }
+    .contact-right h3 { font-family: var(--serif); font-size: 1.3rem; margin-bottom: 1rem; }
+    .info-line { display: flex; gap: 0.6rem; align-items: baseline; flex-wrap: wrap; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; }
+    .lkey { color: var(--muted); font-family: var(--mono); font-size: 0.65rem; text-transform: uppercase; min-width: 65px; }
+    .lval { color: #cfcfec; }
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    footer { background: var(--bg); border-top: 1px solid var(--border); text-align: center; padding: 1.5rem; font-family: var(--mono); font-size: 0.65rem; color: var(--muted); }
 
-    /* ========== RESPONSIVE ========== */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
     @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 6rem 1.5rem 3rem;
-        gap: 2rem;
-      }
+      .hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; gap: 2rem; }
       .hero::before { display: none; }
       .proj-card { grid-template-columns: 1fr; }
-      .proj-sidebar {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-        padding: 1rem 1.2rem;
-      }
+      .proj-sidebar { flex-direction: row; align-items: center; justify-content: space-between; border-right: none; border-bottom: 1px solid var(--border); padding: 1rem 1.2rem; }
       .contact-grid { grid-template-columns: 1fr; gap: 1.8rem; }
       .section-wrap { padding: 3rem 1.2rem; }
       nav { padding: 0.8rem 1.2rem; }
@@ -623,7 +436,6 @@
       .hero-actions { flex-direction: column; width: 100%; }
       .hero-actions .btn { width: 100%; justify-content: center; }
       .info-row { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
-      .info-val { text-align: left; }
       .skills-grid { grid-template-columns: 1fr; }
       .proj-sidebar { flex-wrap: wrap; }
     }
@@ -641,16 +453,20 @@
   </ul>
 </nav>
 
-<!-- HERO / ABOUT -->
+<!-- ══ 01 HERO / ABOUT ══ -->
 <section class="hero" id="about">
   <div class="hero-left">
-    <div class="hero-eyebrow"><span></span> Data Analyst </div>
+    <div class="hero-eyebrow"><span></span> Data Analyst</div>
     <h1>Ahamed<span class="surname">Nismi.</span></h1>
-    <div class="hero-role">analyst tools=SQL,Python,Excel,PowerBI --status=open</div>
-    <!-- LeetCode SQL badge -->
+    <!-- FIX: Power BI spacing + consistent tool names -->
+    <div class="hero-role">analyst tools=[SQL, Python, Excel, Power BI, Google Sheets] --status=open</div>
     <div class="leetcode-badge">⚡ 86 SQL problems solved on LeetCode</div>
     <p class="hero-bio">
-      Final year <strong>Computer Science & Technology</strong> student at <strong>Uva Wellassa University of Sri Lanka</strong> — transforming raw data into strategic insights using <strong>SQL, Python, Power BI, and Excel</strong>. Passionate about business intelligence and data-driven decision making.
+      Final year <strong>Computer Science &amp; Technology</strong> student at
+      <strong>Uva Wellassa University of Sri Lanka</strong> — transforming raw data
+      into strategic insights using <strong>SQL, Python, Power BI, Excel, and Google Sheets</strong>.
+      Passionate about <strong>EDA, KPI dashboards</strong>, and data-driven
+      decision making.
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">Explore Work →</a>
@@ -666,12 +482,11 @@
         <span>profile.json</span>
       </div>
       <div class="info-row"><div class="info-key">Status</div><div class="info-val"><span class="status-badge">Open to opportunities</span></div></div>
-      <div class="info-row"><div class="info-key">Degree</div><div class="info-val">BSc(Hons) in  Computer Science & Technology</div></div>
+      <div class="info-row"><div class="info-key">Degree</div><div class="info-val">BSc (Hons) Computer Science &amp; Technology</div></div>
       <div class="info-row"><div class="info-key">University</div><div class="info-val">Uva Wellassa University, Sri Lanka</div></div>
-      <div class="info-row"><div class="info-key">Year</div><div class="info-val">Final Year (2022/Sep–2026/Sep)</div></div>
-      <div class="info-row"><div class="info-key">Location</div><div class="info-val">Kalmunai, Sri Lanka 🇱🇰</div></div>
-      <div class="info-row"><div class="info-key">Focus</div><div class="info-val">Data Analytics · ML </div></div>
-      <!-- NEW: LeetCode SQL achievement -->
+      <div class="info-row"><div class="info-key">Year</div><div class="info-val">Final Year (Sep 2022 – Sep 2026)</div></div>
+      <div class="info-row"><div class="info-key">Location</div><div class="info-val">Kalmunai, Sri Lanka </div></div>
+      <div class="info-row"><div class="info-key">Focus</div><div class="info-val">Data Analytics · Business Intelligence</div></div>
       <div class="info-row"><div class="info-key">LeetCode SQL</div><div class="info-val"><span class="leetcode-stats">⚡ 86 problems solved</span> (joins, windows, CTEs)</div></div>
     </div>
   </div>
@@ -679,66 +494,231 @@
 
 <div class="ruled-divider"></div>
 
-<!-- SKILLS -->
+<!-- ══ 02 SKILLS ══ -->
 <div class="skills-bg" id="skills">
   <div class="section-wrap">
+    <!-- FIX: section numbering starts at 01 -->
     <div class="section-label">// 02 — Technical Arsenal</div>
     <h2 class="section-title">Data Toolkit</h2>
     <div class="skills-grid">
-      <div class="skill-card fade-in"><div class="skill-icon">🗄️</div><h3>SQL & Databases</h3><p>Advanced queries, CTEs, window functions, and schema design. <strong>86 LeetCode SQL problems</strong> solved.</p><div class="tag-row"><span class="tag">PostgreSQL</span><span class="tag">SQLite</span><span class="tag">Window Functions</span><span class="tag">DBeaver</span></div></div>
-      <div class="skill-card fade-in"><div class="skill-icon">📊</div><h3>Excel & Power Platform</h3><p>Power Query, Power Pivot, DAX – advanced business modeling.</p><div class="tag-row"><span class="tag">Power Query</span><span class="tag">Power Pivot</span><span class="tag">DAX</span><span class="tag">Power BI</span></div></div>
-      <div class="skill-card fade-in"><div class="skill-icon">🐍</div><h3>Python (Analytics)</h3><p>Pandas, NumPy, ML, and scalable data workflows.</p><div class="tag-row"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">NLP</span></div></div>
-      <div class="skill-card fade-in"><div class="skill-icon">📈</div><h3>Data Viz & BI</h3><p>Interactive dashboards, KPI storytelling, reporting automation.</p><div class="tag-row"><span class="tag">Power BI</span><span class="tag">Matplotlib</span><span class="tag">Dashboard Design</span></div></div>
-      <div class="skill-card fade-in"><div class="skill-icon">🤖</div><h3>Machine Learning</h3><p>Classification, Random Forest, feature engineering.</p><div class="tag-row"><span class="tag">Random Forest</span><span class="tag">Heuristics</span><span class="tag">Classification</span></div></div>
-      <div class="skill-card fade-in"><div class="skill-icon">🛠️</div><h3>Dev & Collaboration</h3><p>Git, VS Code, Jupyter, modern data stack.</p><div class="tag-row"><span class="tag">Git/GitHub</span><span class="tag">VS Code</span><span class="tag">Jupyter</span></div></div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-icon">🗄️</div>
+        <h3>SQL &amp; Databases</h3>
+        <!-- FIX: added ETL, Data Cleaning keywords -->
+        <p>Advanced queries, CTEs, window functions, ETL pipelines, and schema design. <strong>86 LeetCode SQL problems</strong> solved — joins, aggregations, and query optimization.</p>
+        <div class="tag-row">
+          <span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">SQLite</span>
+          <span class="tag">Window Functions</span><span class="tag">CTEs</span><span class="tag">ETL</span><span class="tag">DBeaver</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-icon">📊</div>
+        <h3>Excel &amp; Google Sheets</h3>
+        <!-- FIX: Google Sheets now prominent -->
+        <p>Power Query, Power Pivot, DAX — advanced business modeling, reporting automation, and data cleaning workflows in both Excel and Google Sheets.</p>
+        <div class="tag-row">
+          <span class="tag">Excel</span><span class="tag">Google Sheets</span><span class="tag">Power Query</span>
+          <span class="tag">Power Pivot</span><span class="tag">DAX</span><span class="tag">Data Cleaning</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-icon">🐍</div>
+        <h3>Python (Analytics)</h3>
+        <p>Data cleaning, EDA, and analytical workflows with Pandas and NumPy. Machine learning pipelines with Scikit-learn.</p>
+        <div class="tag-row">
+          <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">EDA</span>
+          <span class="tag">Scikit-learn</span><span class="tag">NLP</span><span class="tag">Google Colab</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-icon">📈</div>
+        <h3>BI &amp; Dashboards</h3>
+        <!-- FIX: KPI now explicitly mentioned, Tableau added -->
+        <p>Interactive KPI dashboards, performance tracking, and business reporting. Power BI for operational reporting; Tableau for exploratory visual analysis.</p>
+        <div class="tag-row">
+          <span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">KPI Tracking</span>
+          <span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Dashboard Design</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-icon">🔍</div>
+        <!-- FIX: renamed from Machine Learning to Data Analysis & EDA -->
+        <h3>Data Analysis &amp; EDA</h3>
+        <p>Exploratory data analysis (EDA), trend identification, performance gap analysis, process improvement insights, and anomaly detection.</p>
+        <div class="tag-row">
+          <span class="tag">EDA</span><span class="tag">Trend Analysis</span><span class="tag">Process Improvement</span>
+          <span class="tag">Random Forest</span><span class="tag">Feature Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-icon">🛠️</div>
+        <!-- FIX: renamed to Data Environment & Tools -->
+        <h3>Data Environment &amp; Tools</h3>
+        <p>End-to-end data workflow tools — version control, notebook environments, and database clients for efficient analytical pipelines.</p>
+        <div class="tag-row">
+          <span class="tag">Git / GitHub</span><span class="tag">Jupyter</span><span class="tag">VS Code</span>
+          <span class="tag">Google Colab</span><span class="tag">DBeaver</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
 <div class="ruled-divider"></div>
 
-<!-- PROJECTS -->
+<!-- ══ 03 PROJECTS ══ -->
 <div id="projects">
   <div class="section-wrap">
     <div class="section-label">// 03 — Data Projects</div>
-    <h2 class="section-title">Analytics & Research</h2>
+    <h2 class="section-title">Analytics &amp; Research</h2>
     <div class="projects-stack">
+
+      <!-- Project 01 -->
       <div class="proj-card fade-in">
-        <div class="proj-sidebar done"><div class="proj-num">01</div><div class="proj-status done">✓ Completed</div></div>
-        <div class="proj-body"><h3>Data Job Market Analysis 2023</h3><p>Deep-dive into salaries, demanded skills, and market trends for data roles worldwide using Luke Barousse's dataset.</p><ul class="proj-highlights"><li>Power Pivot data modeling & relationships across multiple tables</li><li>Power Query transformation & DAX measures for tiered analysis</li><li>Interactive Power BI dashboard & top-paying skills identification</li></ul><div class="proj-tags"><span class="proj-tag">Excel</span><span class="proj-tag">Power Query</span><span class="proj-tag">Power Pivot</span><span class="proj-tag">DAX</span><span class="proj-tag">Power BI</span></div></div>
+        <div class="proj-sidebar done">
+          <div class="proj-num">01</div>
+          <div class="proj-status">✓ Completed</div>
+        </div>
+        <div class="proj-body">
+          <h3>Data Job Market Analysis</h3>
+          <!-- FIX: removed "Luke Barousse's dataset" reference -->
+          <p>Deep-dive into salaries, in-demand skills, and market trends for data roles worldwide using a comprehensive job postings dataset of 10,000+ records.</p>
+          <ul class="proj-highlights">
+            <li>Data cleaning and transformation across multiple tables using Power Query</li>
+            <li>Power Pivot data modeling with DAX measures for tiered salary analysis</li>
+            <li>Interactive Power BI dashboard identifying top-paying skills and role trends</li>
+            <li>EDA to surface patterns in job demand, required tools, and compensation</li>
+          </ul>
+          <div class="proj-tags">
+            <span class="proj-tag">Excel</span><span class="proj-tag">Google Sheets</span>
+            <span class="proj-tag">Power Query</span><span class="proj-tag">Power Pivot</span>
+            <span class="proj-tag">DAX</span><span class="proj-tag">Power BI</span><span class="proj-tag">EDA</span>
+          </div>
+          <a href="https://github.com/AhamedNismi-2000/data_jobs_2023" target="_blank" class="proj-link">⌥ GitHub Repository</a>
+        </div>
       </div>
+
+      <!-- Project 02 -->
       <div class="proj-card fade-in">
-        <div class="proj-sidebar wip"><div class="proj-num">02</div><div class="proj-status wip">In Progress</div></div>
-        <div class="proj-body"><h3>Contoso Sales & Operations Analytics</h3><p>End-to-end retail analytics: from schema discovery in PostgreSQL to business dashboards.</p><ul class="proj-highlights"><li>Complex SQL queries (CTEs, window functions) for revenue/returns</li><li>Business KPI creation & trend analysis via Power BI & Excel</li><li>Data storytelling for executive reporting</li></ul><div class="proj-tags"><span class="proj-tag">PostgreSQL</span><span class="proj-tag">DBeaver</span><span class="proj-tag">SQL</span><span class="proj-tag">Power BI</span><span class="proj-tag">Python</span></div><div class="proj-progress"><div class="proj-progress-bar" style="width:45%"></div></div></div>
+        <div class="proj-sidebar wip">
+          <div class="proj-num">02</div>
+          <div class="proj-status">⟳ In Progress</div>
+        </div>
+        <div class="proj-body">
+          <h3>Contoso Sales &amp; Operations Analytics</h3>
+          <p>End-to-end retail analytics pipeline — from schema discovery and ETL in SQL to KPI dashboards for executive decision support.</p>
+          <ul class="proj-highlights">
+            <li>Complex SQL queries (CTEs, window functions) for revenue, returns, and trend analysis</li>
+            <li>ETL pipeline transforming raw transactional data into reporting-ready structures</li>
+            <li>Power BI dashboards tracking 5+ KPIs with drill-through for process improvement insights</li>
+            <li>Data accuracy and consistency validation across reporting structures</li>
+          </ul>
+          <div class="proj-tags">
+            <span class="proj-tag">SQL</span><span class="proj-tag">PostgreSQL</span><span class="proj-tag">ETL</span>
+            <span class="proj-tag">Power BI</span><span class="proj-tag">KPI</span><span class="proj-tag">Excel</span><span class="proj-tag">EDA</span>
+          </div>
+          <div class="proj-progress"><div class="proj-progress-bar" style="width:45%"></div></div>
+          <a href="https://github.com/AhamedNismi-2000/Contoso" target="_blank" class="proj-link">⌥ GitHub Repository</a>
+        </div>
       </div>
+
+      <!-- Project 03 -->
       <div class="proj-card fade-in">
-        <div class="proj-sidebar wip"><div class="proj-num">03</div><div class="proj-status wip">Research (60%)</div></div>
-        <div class="proj-body"><h3>Malicious URL Detection — ML & NLP</h3><p>Academic research combining heuristic rules and Random Forest for cybersecurity.</p><ul class="proj-highlights"><li>Heuristic engine: URL length, entropy, special chars</li><li>NLP lexical features & token analysis</li><li>Random Forest classifier with precision/recall evaluation</li></ul><div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">NLP</span><span class="proj-tag">Random Forest</span><span class="proj-tag">Scikit-learn</span><span class="proj-tag">Cybersecurity</span></div><div class="proj-progress"><div class="proj-progress-bar" style="width:60%"></div></div></div>
+        <div class="proj-sidebar wip">
+          <div class="proj-num">03</div>
+          <div class="proj-status">⟳ Research (60%)</div>
+        </div>
+        <div class="proj-body">
+          <h3>Malicious URL Detection — ML &amp; NLP</h3>
+          <p>Academic research combining heuristic feature engineering and machine learning for cybersecurity threat classification.</p>
+          <ul class="proj-highlights">
+            <li>EDA on URL datasets to identify anomaly patterns and feature distributions</li>
+            <li>NLP-based lexical feature extraction (URL length, entropy, special characters)</li>
+            <li>Random Forest classifier with precision/recall evaluation and feature importance ranking</li>
+            <li>Explainable AI (XAI) techniques for interpretable, data-driven security insights</li>
+          </ul>
+          <div class="proj-tags">
+            <span class="proj-tag">Python</span><span class="proj-tag">NLP</span><span class="proj-tag">EDA</span>
+            <span class="proj-tag">Random Forest</span><span class="proj-tag">Scikit-learn</span><span class="proj-tag">XAI</span>
+          </div>
+          <div class="proj-progress"><div class="proj-progress-bar" style="width:60%"></div></div>
+          <a href="https://github.com/AhamedNismi-2000/malicious_url_detection" target="_blank" class="proj-link">⌥ GitHub Repository</a>
+        </div>
       </div>
+
+      <!-- Project 04 -->
       <div class="proj-card fade-in">
-        <div class="proj-sidebar planned"><div class="proj-num">04</div><div class="proj-status planned">Upcoming</div></div>
-        <div class="proj-body"><h3>Olist E‑Commerce Intelligence</h3><p>RFM segmentation, cohort & seller analysis across 9-table Brazilian dataset.</p><ul class="proj-highlights"><li>Customer segmentation & retention cohorts with SQL</li><li>Seller ranking using advanced window functions</li><li>Full Power BI dashboard for revenue storytelling</li></ul><div class="proj-tags"><span class="proj-tag">SQL</span><span class="proj-tag">Python</span><span class="proj-tag">RFM Analysis</span><span class="proj-tag">Cohort Analysis</span><span class="proj-tag">Power BI</span></div></div>
+        <div class="proj-sidebar planned">
+          <div class="proj-num">04</div>
+          <div class="proj-status">◎ Upcoming</div>
+        </div>
+        <div class="proj-body">
+          <h3>Olist E-Commerce Intelligence</h3>
+          <p>Customer segmentation, cohort retention analysis, and seller performance ranking across a 9-table Brazilian e-commerce dataset.</p>
+          <ul class="proj-highlights">
+            <li>RFM segmentation and customer retention cohort analysis using SQL window functions</li>
+            <li>Seller ranking and performance gap identification with advanced SQL</li>
+            <li>ETL pipeline from raw relational schema to analytical data model</li>
+            <li>Full Power BI dashboard for revenue storytelling and business insights</li>
+          </ul>
+          <div class="proj-tags">
+            <span class="proj-tag">SQL</span><span class="proj-tag">Python</span><span class="proj-tag">RFM Analysis</span>
+            <span class="proj-tag">Cohort Analysis</span><span class="proj-tag">ETL</span><span class="proj-tag">Power BI</span>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
 
-<!-- CONTACT -->
+<div class="ruled-divider"></div>
+
+<!-- ══ 04 CONTACT ══ -->
 <div class="contact-bg" id="contact">
   <div class="section-wrap">
     <div class="section-label">// 04 — Connect</div>
-    <h2 class="section-title">Let’s collaborate</h2>
+    <h2 class="section-title">Let's collaborate</h2>
     <div class="contact-grid">
-      <div class="contact-left"><p>I'm actively seeking data analyst roles, internships, and project collaborations. If you have an opportunity or just want to chat about data, reach out.</p>
-        <div class="contact-links"><a href="mailto:mnanismi2000@gmail.com" class="contact-link link-email"><div class="link-icon">✉</div>mnanismi2000@gmail.com</a><a href="https://github.com/AhamedNismi-2000" target="_blank" class="contact-link link-github"><div class="link-icon">⌥</div>github.com/AhamedNismi-2000</a><a href="https://www.linkedin.com/in/ahamednismi312" target="_blank" class="contact-link link-li"><div class="link-icon">in</div>linkedin.com/in/ahamednismi312</a></div>
+      <div class="contact-left">
+        <p>I'm actively seeking data analyst roles, internships, and project collaborations. If you have an opportunity or just want to chat about data, reach out.</p>
+        <div class="contact-links">
+          <a href="mailto:mnanismi2000@gmail.com" class="contact-link">
+            <div class="link-icon">✉</div>mnanismi2000@gmail.com
+          </a>
+          <a href="https://github.com/AhamedNismi-2000" target="_blank" class="contact-link">
+            <div class="link-icon">⌥</div>github.com/AhamedNismi-2000
+          </a>
+          <a href="https://www.linkedin.com/in/ahamednismi312" target="_blank" class="contact-link">
+            <div class="link-icon">in</div>linkedin.com/in/ahamednismi312
+          </a>
+        </div>
       </div>
-      <div class="contact-right"><h3>Snapshot</h3><div class="info-line"><div class="lkey">Name</div><div class="lval">Ahamed Nismi</div></div><div class="info-line"><div class="lkey">Role</div><div class="lval">Data Analyst (aspiring)</div></div><div class="info-line"><div class="lkey">Degree</div><div class="lval">BSc CS & Tech — Final Year</div></div><div class="info-line"><div class="lkey">LeetCode SQL</div><div class="lval">⚡ 86 problems solved</div></div><div class="info-line"><div class="lkey">Uni</div><div class="lval">Uva Wellassa University, LK</div></div><div class="info-line"><div class="lkey">Tools</div><div class="lval">SQL · Python · Power BI · Excel</div></div><div class="info-line"><div class="lkey">Open</div><div class="lval" style="color:#7fff6e;">● Available for work</div></div></div>
+      <div class="contact-right">
+        <h3>Snapshot</h3>
+        <div class="info-line"><div class="lkey">Name</div><div class="lval">Ahamed Nismi</div></div>
+        <div class="info-line"><div class="lkey">Role</div><div class="lval"> Data Analyst</div></div>
+        <div class="info-line"><div class="lkey">Degree</div><div class="lval">BSc CS &amp; Tech — Final Year</div></div>
+        <div class="info-line"><div class="lkey">LeetCode</div><div class="lval">⚡ 86 SQL problems solved</div></div>
+        <div class="info-line"><div class="lkey">Uni</div><div class="lval">Uva Wellassa University, LK</div></div>
+        <div class="info-line"><div class="lkey">Tools</div><div class="lval">SQL · Python · Power BI · Excel · Google Sheets</div></div>
+        <div class="info-line"><div class="lkey">Open</div><div class="lval" style="color:#7fff6e;">● Available for work</div></div>
+      </div>
     </div>
   </div>
 </div>
+
 <footer>© 2026 Ahamed Nismi · Data Analyst Portfolio </footer>
 
 <script>
+  // Fade-in on scroll
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -749,16 +729,17 @@
   }, { threshold: 0.08, rootMargin: "0px 0px -20px 0px" });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  const sections = document.querySelectorAll('[id]');
+  // FIX: active-nav uses class toggling instead of inline styles
+  const sections = document.querySelectorAll('section[id], div[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
     let current = '';
-    const scrollPos = window.scrollY + 100;
-    sections.forEach(s => { if (scrollPos >= s.offsetTop) current = s.id; });
+    sections.forEach(s => {
+      if (window.scrollY + 120 >= s.offsetTop) current = s.id;
+    });
     navLinks.forEach(a => {
-      const href = a.getAttribute('href').substring(1);
-      if (href === current) a.style.color = 'var(--accent)';
-      else a.style.color = '';
+      a.classList.remove('active-nav');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active-nav');
     });
   });
 </script>
