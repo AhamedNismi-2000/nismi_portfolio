@@ -388,6 +388,33 @@
       transition: all 0.2s;
     }
     .proj-link:hover { background: rgba(91,224,255,0.08); }
+    .proj-link + .proj-link { margin-left: 0.5rem; }
+
+    /* dashboard image inside project card */
+    .proj-dashboard-img {
+      margin-top: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      max-height: 220px;
+    }
+    .proj-dashboard-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .proj-dashboard-placeholder {
+      margin-top: 1rem;
+      border-radius: 10px;
+      border: 1px dashed rgba(91,224,255,0.25);
+      background: rgba(91,224,255,0.04);
+      padding: 1.2rem;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--muted);
+    }
 
     /* CONTACT */
     .contact-bg { background: var(--surface2); border-top: 1px solid var(--border); }
@@ -458,9 +485,10 @@
   <div class="hero-left">
     <div class="hero-eyebrow"><span></span> Data Analyst</div>
     <h1>Ahamed<span class="surname">Nismi.</span></h1>
-    <!-- FIX: Power BI spacing + consistent tool names -->
     <div class="hero-role">analyst tools=[SQL, Python, Excel, Power BI, Google Sheets] --status=open</div>
-    <div class="leetcode-badge">  <a href="https://github.com/AhamedNismi-2000/LeetCode_SQL"  target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">⚡ 86 SQL problems solved on LeetCode</a></div>
+    <div class="leetcode-badge">
+      <a href="https://github.com/AhamedNismi-2000/LeetCode_SQL" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">⚡ 86 SQL problems solved on LeetCode</a>
+    </div>
     <p class="hero-bio">
       Final year <strong>Computer Science &amp; Technology</strong> student at
       <strong>Uva Wellassa University of Sri Lanka</strong> — transforming raw data
@@ -485,7 +513,7 @@
       <div class="info-row"><div class="info-key">Degree</div><div class="info-val">BSc (Hons) Computer Science &amp; Technology</div></div>
       <div class="info-row"><div class="info-key">University</div><div class="info-val">Uva Wellassa University, Sri Lanka</div></div>
       <div class="info-row"><div class="info-key">Year</div><div class="info-val">Final Year (Sep 2022 – Sep 2026)</div></div>
-      <div class="info-row"><div class="info-key">Location</div><div class="info-val">Kalmunai, Sri Lanka </div></div>
+      <div class="info-row"><div class="info-key">Location</div><div class="info-val">Kalmunai, Sri Lanka</div></div>
       <div class="info-row"><div class="info-key">Focus</div><div class="info-val">Data Analytics · Business Intelligence</div></div>
       <div class="info-row"><div class="info-key">LeetCode SQL</div><div class="info-val"><span class="leetcode-stats">⚡ 86 problems solved</span> (joins, windows, CTEs)</div></div>
     </div>
@@ -497,7 +525,6 @@
 <!-- ══ 02 SKILLS ══ -->
 <div class="skills-bg" id="skills">
   <div class="section-wrap">
-    <!-- FIX: section numbering starts at 01 -->
     <div class="section-label">// 02 — Technical Arsenal</div>
     <h2 class="section-title">Data Toolkit</h2>
     <div class="skills-grid">
@@ -505,7 +532,6 @@
       <div class="skill-card fade-in">
         <div class="skill-icon">🗄️</div>
         <h3>SQL &amp; Databases</h3>
-        <!-- FIX: added ETL, Data Cleaning keywords -->
         <p>Advanced queries, CTEs, window functions, ETL pipelines, and schema design. <strong>86 LeetCode SQL problems</strong> solved — joins, aggregations, and query optimization.</p>
         <div class="tag-row">
           <span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">SQLite</span>
@@ -516,7 +542,6 @@
       <div class="skill-card fade-in">
         <div class="skill-icon">📊</div>
         <h3>Excel &amp; Google Sheets</h3>
-        <!-- FIX: Google Sheets now prominent -->
         <p>Power Query, Power Pivot, DAX — advanced business modeling, reporting automation, and data cleaning workflows in both Excel and Google Sheets.</p>
         <div class="tag-row">
           <span class="tag">Excel</span><span class="tag">Google Sheets</span><span class="tag">Power Query</span>
@@ -537,7 +562,6 @@
       <div class="skill-card fade-in">
         <div class="skill-icon">📈</div>
         <h3>BI &amp; Dashboards</h3>
-        <!-- FIX: KPI now explicitly mentioned, Tableau added -->
         <p>Interactive KPI dashboards, performance tracking, and business reporting. Power BI for operational reporting; Tableau for exploratory visual analysis.</p>
         <div class="tag-row">
           <span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">KPI Tracking</span>
@@ -547,7 +571,6 @@
 
       <div class="skill-card fade-in">
         <div class="skill-icon">🔍</div>
-        <!-- FIX: renamed from Machine Learning to Data Analysis & EDA -->
         <h3>Data Analysis &amp; EDA</h3>
         <p>Exploratory data analysis (EDA), trend identification, performance gap analysis, process improvement insights, and anomaly detection.</p>
         <div class="tag-row">
@@ -558,7 +581,6 @@
 
       <div class="skill-card fade-in">
         <div class="skill-icon">🛠️</div>
-        <!-- FIX: renamed to Data Environment & Tools -->
         <h3>Data Environment &amp; Tools</h3>
         <p>End-to-end data workflow tools — version control, notebook environments, and database clients for efficient analytical pipelines.</p>
         <div class="tag-row">
@@ -580,24 +602,24 @@
     <h2 class="section-title">Analytics &amp; Research</h2>
     <div class="projects-stack">
 
-      <!-- Project 01 -->
+      <!-- Project 01 — Job Market Analysis -->
       <div class="proj-card fade-in">
         <div class="proj-sidebar done">
           <div class="proj-num">01</div>
           <div class="proj-status">✓ Completed</div>
         </div>
         <div class="proj-body">
-          <h3>Data Job Market Analysis</h3>
-          <!-- FIX: removed "Luke Barousse's dataset" reference -->
+          <h3>Job Market Analysis</h3>
           <p>Deep-dive into salaries, in-demand skills, and market trends for data roles worldwide using a comprehensive job postings dataset of 10,000+ records.</p>
           <ul class="proj-highlights">
-            <li>Data cleaning and transformation across multiple tables using Power Query</li>
-            <li>Power Pivot data modeling with DAX measures for tiered salary analysis</li>
-            <li>Interactive Power BI dashboard identifying top-paying skills and role trends</li>
-            <li>EDA to surface patterns in job demand, required tools, and compensation</li>
+            <li>SQL queries to extract, filter, and aggregate job postings data across roles, locations, and skill requirements</li>
+            <li>Data cleaning and transformation across multiple Excel files using Power Query — merging, deduplication, and type normalisation</li>
+            <li>Power Pivot data modeling with DAX measures for tiered salary analysis and skill demand ranking</li>
+            <li>Interactive Power BI dashboard identifying top-paying skills, role trends, and compensation patterns</li>
+            <li>EDA to surface insights on in-demand tools, salary distribution, and job market competitiveness</li>
           </ul>
           <div class="proj-tags">
-            <span class="proj-tag">Excel</span><span class="proj-tag">Google Sheets</span>
+            <span class="proj-tag">SQL</span><span class="proj-tag">Excel</span><span class="proj-tag">Google Sheets</span>
             <span class="proj-tag">Power Query</span><span class="proj-tag">Power Pivot</span>
             <span class="proj-tag">DAX</span><span class="proj-tag">Power BI</span><span class="proj-tag">EDA</span>
           </div>
@@ -605,10 +627,35 @@
         </div>
       </div>
 
-      <!-- Project 02 -->
+      <!-- Project 02 — FinSight Lanka (NEW) -->
+      <div class="proj-card fade-in">
+        <div class="proj-sidebar done">
+          <div class="proj-num">02</div>
+          <div class="proj-status">✓ Completed</div>
+        </div>
+        <div class="proj-body">
+          <h3>FinSight Lanka — Fintech Customer Analytics</h3>
+          <p>End-to-end analytics assessment for a Sri Lankan fintech — identifying LKR 130M credit risk exposure and a LKR 222M cross-sell opportunity from 500 customer records.</p>
+          <ul class="proj-highlights">
+            <li>Full data cleaning pipeline in Python — resolved 11 issue categories including duplicates, sentinel values, impossible ages, and loan contradictions across 508 raw rows</li>
+            <li>PostgreSQL analysis across Q1–Q3: savings behaviour, loan risk (DSR), and digital engagement with findings embedded as SQL comments</li>
+            <li>Defined 5 business KPIs (Risk · Growth · Engagement) with DAX measures in Power BI connected directly to PostgreSQL</li>
+            <li>Identified Starter + Vehicle loan combination as highest-risk (17.1% default) and 251 savings-only customers (LKR 222M) as cross-sell opportunity</li>
+            <li>Written board summary with 2 data-backed strategic recommendations and a 5-point self-critique</li>
+          </ul>
+          <div class="proj-tags">
+            <span class="proj-tag">Python</span><span class="proj-tag">PostgreSQL</span><span class="proj-tag">Power BI</span>
+            <span class="proj-tag">DAX</span><span class="proj-tag">SQL</span><span class="proj-tag">Data Cleaning</span>
+            <span class="proj-tag">KPI</span><span class="proj-tag">EDA</span><span class="proj-tag">Fintech</span>
+          </div>
+          <a href="https://github.com/AhamedNismi-2000/dialog-finance-analytics" target="_blank" class="proj-link">⌥ GitHub Repository</a>
+        </div>
+      </div>
+
+      <!-- Project 03 — Contoso -->
       <div class="proj-card fade-in">
         <div class="proj-sidebar wip">
-          <div class="proj-num">02</div>
+          <div class="proj-num">03</div>
           <div class="proj-status">⟳ In Progress</div>
         </div>
         <div class="proj-body">
@@ -629,10 +676,10 @@
         </div>
       </div>
 
-      <!-- Project 03 -->
+      <!-- Project 04 — Malicious URL -->
       <div class="proj-card fade-in">
         <div class="proj-sidebar wip">
-          <div class="proj-num">03</div>
+          <div class="proj-num">04</div>
           <div class="proj-status">⟳ Research (60%)</div>
         </div>
         <div class="proj-body">
@@ -653,10 +700,10 @@
         </div>
       </div>
 
-      <!-- Project 04 -->
+      <!-- Project 05 — Olist -->
       <div class="proj-card fade-in">
         <div class="proj-sidebar planned">
-          <div class="proj-num">04</div>
+          <div class="proj-num">05</div>
           <div class="proj-status">◎ Upcoming</div>
         </div>
         <div class="proj-body">
@@ -704,7 +751,7 @@
       <div class="contact-right">
         <h3>Snapshot</h3>
         <div class="info-line"><div class="lkey">Name</div><div class="lval">Ahamed Nismi</div></div>
-        <div class="info-line"><div class="lkey">Role</div><div class="lval"> Data Analyst</div></div>
+        <div class="info-line"><div class="lkey">Role</div><div class="lval">Data Analyst</div></div>
         <div class="info-line"><div class="lkey">Degree</div><div class="lval">BSc CS &amp; Tech — Final Year</div></div>
         <div class="info-line"><div class="lkey">LeetCode</div><div class="lval">⚡ 86 SQL problems solved</div></div>
         <div class="info-line"><div class="lkey">Uni</div><div class="lval">Uva Wellassa University, LK</div></div>
@@ -715,10 +762,9 @@
   </div>
 </div>
 
-<footer>© 2026 Ahamed Nismi · Data Analyst Portfolio </footer>
+<footer>© 2026 Ahamed Nismi · Data Analyst Portfolio</footer>
 
 <script>
-  // Fade-in on scroll
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -729,7 +775,6 @@
   }, { threshold: 0.08, rootMargin: "0px 0px -20px 0px" });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // FIX: active-nav uses class toggling instead of inline styles
   const sections = document.querySelectorAll('section[id], div[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
